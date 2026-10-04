@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inside You — Self Discovery Studio</title>
+    <meta name="description" content="Inside You — Self Discovery Studio. ค้นหารูปแบบชีวิต ตัวตน และเส้นทางของคุณผ่านบททดสอบและ Roadmap 5 ขั้นตอน" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Mitr', 'sans-serif'],
+              outfit: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              sketch: '#2D2B3A',
+              plum: '#584B68',
+              plumHover: '#463B53',
+              mint: '#7EC4B5',
+              mintLight: '#E6F5F2',
+              pastelYellow: '#FFF8E7',
+              pastelPink: '#FCEBEB',
+              pastelOrange: '#FEEBD9',
+              pastelPurple: '#F0EBF5',
+              bgCanvas: '#F2F1F6',
+              charcoal: '#2D2B3A',
+            },
+            boxShadow: {
+              sketch: '3px 3px 0px #2D2B3A',
+              'sketch-lg': '5px 5px 0px #2D2B3A',
+              'sketch-sm': '2px 2px 0px #2D2B3A',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#F2F1F6] text-[#2D2B3A] antialiased selection:bg-[#7EC4B5]/30 selection:text-[#2D2B3A]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

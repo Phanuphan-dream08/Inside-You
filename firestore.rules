@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // User profile rule
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Assessment results rule
+    match /assessmentResults/{docId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Question answers history rule
+    match /answers/{docId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Roadmap progress tracking rule
+    match /roadmapProgress/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Story chapters progress & reflections rule
+    match /storyProgress/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Default fallback rule
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
